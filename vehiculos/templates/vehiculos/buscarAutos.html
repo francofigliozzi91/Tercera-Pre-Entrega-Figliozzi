@@ -1,0 +1,16 @@
+{% extends 'vehiculos/base.html' %}
+{% load static %}
+
+{% block titulo %}
+   Buscar Autos
+{% endblock titulo %}
+    
+
+{% block contenido %}
+   <h2>Buscar por Marcas de Autos:</h2> 
+   <form action="/buscar2" method="get">
+        {% csrf_token %}
+        <p>Marca de Autos a Buscar: <input type="text" name="buscar" id="buscar"></p>
+        <input type="submit" value="Enviar">
+   </form>
+{% endblock contenido %}
